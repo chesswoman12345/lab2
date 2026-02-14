@@ -17,19 +17,22 @@ hmmmmmmm
 6
 Étape 5 : Définir 3 scénarios simples
 
-7
-Étape 6 : Lire Android Security (6 lignes max)
+# Étape 6 : Lire Android Security (6 lignes max)
 
-8
-Étape 7 : Verified Boot (idée générale + check AVD)
+Le programme de sécurité d'Android repose sur une architecture multicouche alliant protection des données et ouverture aux développeurs. Cette stratégie s'appuie sur des mécanismes natifs tels que le sandboxing, le chiffrement et le Verified Boot pour garantir l'intégrité du système. La plateforme assure une défense proactive via des bulletins de sécurité réguliers et des standards rigoureux appliqués au matériel comme au réseau. Enfin, des outils de diagnostic avancés permettent de neutraliser les vulnérabilités avant toute exploitation malveillante.
 
-9
-Étape 8 : AVB (Android Verified Boot)
+# Étape 7 : Verified Boot (idée générale + check AVD)
 
-10
-Étape 9 : Définir le rooting (4 phrases)
+![](https://github.com/user-attachments/assets/02d27b25-a7b1-40ff-b26f-f7b10db1b144)
 
-11
+
+
+# Étape 9 : Définir le rooting (4 phrases)
+
+Le rooting est une action qui compromet les piliers de la sécurité d'Android (le sandboxing, le modèle de permissions et l'intégrité système) en accordant des privilèges totaux sur l'ensemble de la structure logicielle (la "forteresse numérique").
+
+En d'autres termes, il s'agit de s'octroyer des droits d'accès illimités qui permettent de contourner les barrières de protection natives conçues pour isoler les applications et protéger les données sensibles.
+
 Étape 10 : Intérêt labo (non opérationnel)
 
 12
