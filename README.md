@@ -53,11 +53,37 @@ En d'autres termes, il s'agit de s'octroyer des droits d'accès illimités qui p
 15
 Étape 14 : OWASP MASTG (2 idées de tests)
 
-16
-Étape 15 : Commandes de rooting (rappel synthèse)
+## Étape 16 : Fiche Environnement (Traçabilité)
 
-17
-Étape 16 : Traçabilité : fiche environnement (1 page)
+### 📋 Informations Générales
+* **Auteur :** RAZAN ZOUIN
+* **Date :** 13 Février 2026
+* **Support :** Émulateur Android (AVD) "emu64xa"
+* **Modèle Émulé :** Pixel 6 (x86_64)
+* **Système :** Android 15 (VanillaIceCream) | API Level 35
+* **Application :** DIVA (Damn Insecure and Vulnerable App)
+
+---
+
+### 🔍 Synthèse des Observations
+* **Accès Privilégié :** Obtention confirmée des droits root (**uid=0**).
+* **État d'Intégrité :** Verified Boot en état "**orange**" (indiquant une rupture de la chaîne de confiance).
+* **Vulnérabilité Majeure :** Exposition d'identifiants critiques (`Secret123!`) stockés en clair dans les *Shared Preferences*.
+
+---
+
+### 📸 Galerie des Preuves
+1.  **Lancement :** Initialisation de l'application (Image 7).
+2.  **Privilèges :** Confirmation du mode root via console (Images 2-3).
+3.  **Sécurité Système :** Rapport d'état du Verified Boot (Image 13).
+4.  **Exfiltration :** Lecture technique des données sensibles (Images 9-10-12).
+
+---
+
+### 🧹 État de Sortie & Limites
+* **Périmètre :** Tests restreints à un environnement virtualisé ; absence de protections matérielles de type **TEE** ou **StrongBox**.
+* **Nettoyage :** Réinitialisation complète (Wipe Data) de l'AVD effectuée. Aucune donnée fictive ne subsiste sur le support.
+
 
 ## Étape 17 : Remise à zéro AVD (obligatoire fin de séance)
 ![](https://github.com/user-attachments/assets/3f2b143a-56ab-4dcc-a677-eaafe270e184)
