@@ -1,17 +1,19 @@
 # Lab 2 : Rooting
 ## Étape 1 : Rooter l'AVD
 
+![](https://github.com/user-attachments/assets/7f8ee7c1-8e73-48c7-a433-2c39ba3043bb)
 
+![](https://github.com/user-attachments/assets/c85c3f25-7c89-4643-9ebf-9e4c91e10177)
 
-3
+![](https://github.com/user-attachments/assets/8bbd1d24-c69e-4bce-8239-5063b282c957)
+
 Étape 2 : Fiche périmètre (5 lignes)
 
-4
-Étape 3 : Démarrer un AVD propre
+# Étape 3 : Démarrer un AVD propre
+hmmmmmmm
 
-5
-Étape 4 : Installer et lancer l'app de test
-
+# Étape 4 : Installer et lancer l'app de test
+![](https://github.com/user-attachments/assets/0587e99e-3d02-4064-94bf-fe83c05f3824)
 6
 Étape 5 : Définir 3 scénarios simples
 
