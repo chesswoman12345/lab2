@@ -39,19 +39,51 @@ Le rooting est une action qui compromet les piliers de la sécurité d'Android (
 
 En d'autres termes, il s'agit de s'octroyer des droits d'accès illimités qui permettent de contourner les barrières de protection natives conçues pour isoler les applications et protéger les données sensibles.
 
-Étape 10 : Intérêt labo (non opérationnel)
+## Étape 10 : Intérêt labo (Environnement non opérationnel)
 
-12
-Étape 11 : Matrice de risques (8 risques, 1 phrase chacun)
+L'utilisation d'un laboratoire non opérationnel (AVD) permet d'isoler les tests de sécurité dans un environnement virtuel étanche, évitant ainsi tout risque de corruption sur un appareil physique personnel. Cette approche offre une flexibilité totale pour manipuler les privilèges root et simuler des attaques complexes sans compromettre de données réelles ou de composants matériels coûteux.
 
-13
-Étape 12 : Mesures défensives (8 mesures, 1 phrase chacune)
+---
 
-14
-Étape 13 : OWASP MASVS (2 exigences)
+## Étape 11 : Matrice de Risques (8 risques)
 
-15
-Étape 14 : OWASP MASTG (2 idées de tests)
+1. **Élévation de privilèges :** Un attaquant obtient les droits root pour contourner les restrictions logicielles natives.
+2. **Exfiltration de données :** Accès non autorisé aux bases de données SQLite ou aux fichiers de préférences partagées.
+3. **Capture de flux réseau :** Interception de données sensibles transmises sans chiffrement TLS robuste.
+4. **Ingénierie inverse :** Décompilation de l'APK permettant l'analyse du code source et des secrets enfouis.
+5. **Modification de l'intégrité :** Altération du binaire de l'application pour injecter un comportement malveillant.
+6. **Fuite de logs :** Exposition d'informations sensibles (tokens, identifiants) via les journaux système Logcat.
+7. **Contournement de l'authentification :** Manipulation de la mémoire vive pour forcer l'accès à des sessions actives.
+8. **Rupture de la chaîne de confiance :** Désactivation du Verified Boot facilitant l'installation de firmwares compromis.
+
+---
+
+## Étape 12 : Mesures Défensives (8 mesures)
+
+1. **Obscurcissement du code :** Utiliser ProGuard ou R8 pour rendre la rétro-ingénierie complexe et illisible.
+2. **Détection du Root :** Implémenter des bibliothèques comme RootBeer pour bloquer l'exécution sur les appareils compromis.
+3. **Chiffrement au repos :** Chiffrer systématiquement les données locales avec SQLCipher ou l'API Jetpack Security.
+4. **Certificate Pinning :** Restreindre les connexions réseau aux seuls serveurs possédant un certificat prédéfini.
+5. **Validation des entrées :** Assainir rigoureusement toutes les données entrantes pour prévenir les injections.
+6. **Nettoyage des logs :** Désactiver tous les journaux de débogage sensibles avant la mise en production.
+7. **Utilisation du TEE :** Stocker les clés cryptographiques dans le Trusted Execution Environment du processeur.
+8. **Vérification d'intégrité :** Utiliser l'API Play Integrity pour s'assurer que l'application n'a pas été modifiée.
+
+
+
+---
+
+## Étape 13 : OWASP MASVS (2 exigences)
+
+* **MASVS-STORAGE-1 :** L'application doit stocker les données sensibles de manière sécurisée, en utilisant les mécanismes de stockage fournis par le système d'exploitation.
+* **MASVS-RESILIENCE-1 :** L'application doit être capable de détecter si elle s'exécute sur un appareil rooté ou dont l'intégrité est compromise.
+
+---
+
+## Étape 14 : OWASP MASTG (2 idées de tests)
+
+* **MSTG-STORAGE-01 :** Examiner le répertoire de données de l'application (`/data/data/com.example.app`) après utilisation pour vérifier la présence de fichiers en clair.
+* **MSTG-NETWORK-03 :** Effectuer une interception de trafic via un proxy (Burp Suite) pour vérifier si l'application valide correctement la chaîne de certificats SSL/TLS
 
 ## Étape 16 : Fiche Environnement (Traçabilité)
 
