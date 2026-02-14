@@ -50,12 +50,13 @@ hmmmmmmm
 17
 Étape 16 : Traçabilité : fiche environnement (1 page)
 
-18
-Étape 17 : Remise à zéro AVD (obligatoire fin de séance)
+# Étape 17 : Remise à zéro AVD (obligatoire fin de séance)
+![](https://github.com/user-attachments/assets/3f2b143a-56ab-4dcc-a677-eaafe270e184)
 
-19
+![](https://github.com/user-attachments/assets/e61b4186-895b-4d1b-80c6-02735dede0d7)
+
 Étape 18 : Remise à zéro device labo (si utilisé)
-
+no need
 20
 Étape 19 : Livrables (1–2 pages)
 
